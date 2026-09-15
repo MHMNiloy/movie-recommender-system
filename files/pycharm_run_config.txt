@@ -1,0 +1,148 @@
+# PyCharm Run Configuration for CineMatch Streamlit App
+# Save this as a reference for your PyCharm setup
+
+==============================================
+STREAMLIT RUN CONFIGURATION (Recommended)
+==============================================
+
+Configuration Name: "Streamlit - CineMatch"
+
+Module name: streamlit
+Script path: movie_recommender_app.py
+Parameters: run movie_recommender_app.py
+
+Python interpreter: [Your virtual environment path]
+Working directory: [Your project root]
+PYTHONPATH: [Automatically included]
+
+Environment variables (optional):
+    STREAMLIT_SERVER_PORT=8501
+    STREAMLIT_SERVER_HEADLESS=false
+
+==============================================
+DIRECT PYTHON CONFIGURATION (Alternative)
+==============================================
+
+Configuration Name: "Python - Streamlit"
+
+Script path: [project-root]/movie_recommender_app.py
+Module name: streamlit
+
+Parameters:
+    run movie_recommender_app.py
+
+Python interpreter: [Your virtual environment]
+Working directory: [Your project root]
+
+==============================================
+PYCHARM IDE SHORTCUTS
+==============================================
+
+Run Application:
+    Windows/Linux: Shift + F10
+    macOS: Control + R
+
+Debug Application:
+    Windows/Linux: Shift + F9
+    macOS: Control + D
+
+Stop Application:
+    Windows/Linux: Ctrl + F2
+    macOS: Command + F2
+
+Terminal (Alt + F12):
+    streamlit run movie_recommender_app.py
+
+==============================================
+TERMINAL COMMANDS QUICK REFERENCE
+==============================================
+
+Activate Virtual Environment (if not auto-activated):
+    Mac/Linux: source venv/bin/activate
+    Windows: venv\Scripts\activate
+
+Install Dependencies:
+    pip install -r requirements.txt
+
+Run App:
+    streamlit run movie_recommender_app.py
+
+Run on Custom Port:
+    streamlit run movie_recommender_app.py --server.port 8502
+
+Run in Headless Mode (No Browser):
+    streamlit run movie_recommender_app.py --logger.level=error
+
+==============================================
+PYCHARM PREFERENCES SETUP
+==============================================
+
+1. Python Interpreter:
+   Settings/Preferences → Project: [project-name] → Python Interpreter
+   
+2. Code Inspection:
+   Settings/Preferences → Editor → Inspections
+   (Disable warnings for Streamlit magic commands if needed)
+
+3. Terminal Settings:
+   Settings/Preferences → Tools → Terminal
+   Set Shell path to your preferred terminal (bash, zsh, PowerShell, etc.)
+
+4. File Watcher (Optional - Auto-reload):
+   Settings/Preferences → Tools → File Watchers
+   (Streamlit has built-in auto-reload, so this is usually not needed)
+
+==============================================
+DEBUGGING IN PYCHARM
+==============================================
+
+1. Click on line number to set breakpoint
+2. Press Shift + F9 (Windows/Linux) or Control + D (macOS)
+3. App will pause at breakpoint when that code is executed
+4. Use Debug panel to inspect variables and step through code
+
+Note: Streamlit reruns the entire script when interacting with widgets,
+so breakpoints may trigger multiple times. This is normal behavior.
+
+==============================================
+COMMON ISSUES & SOLUTIONS
+==============================================
+
+Issue: "No module named 'streamlit'"
+Solution: Check Python interpreter is set to your venv
+         Verify: Settings → Python Interpreter shows correct env
+
+Issue: Port 8501 already in use
+Solution: streamlit run movie_recommender_app.py --server.port 8502
+
+Issue: CSV files not found
+Solution: Ensure CSV files are in project root
+         File → Project Structure → Mark folder as Sources Root
+
+Issue: Virtual environment not activating
+Solution: PyCharm usually auto-activates venv
+         Check bottom-right corner for Python interpreter info
+         If not, manually select in Settings → Python Interpreter
+
+==============================================
+EXTENSIONS/PLUGINS FOR STREAMLIT (Optional)
+==============================================
+
+PyCharm doesn't have official Streamlit plugin, but these help:
+
+1. Python (Built-in)
+2. Markdown (Built-in)
+3. CSV Editor - View CSV files in PyCharm
+4. HTTP Client - Test API calls in development
+
+==============================================
+VERSION INFO
+==============================================
+
+Tested with:
+- PyCharm 2023.1+
+- Python 3.8+
+- Streamlit 1.28.1+
+- macOS, Windows, Linux
+
+==============================================
